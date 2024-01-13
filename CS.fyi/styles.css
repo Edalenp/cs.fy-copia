@@ -1,0 +1,143 @@
+:root {
+    --principal: #e4e4e4;
+    --secondary: #404040;
+    --terciary: #9b9b9b;
+    --paragraphs: #d4d4d4;
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #171717;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 750px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+nav > img {
+    width: 100%;
+    max-width: 110px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 10px;
+    font-size: 1.03rem;
+}
+
+nav .links > a {
+    text-decoration: none;
+    color: var(--terciary);
+    transition-duration: 0.7s;
+}
+
+nav .links > a:hover {
+    color: var(--principal);
+}
+
+main {
+    max-width: 750px;
+    padding: 0 1rem;
+    margin: 50px auto;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.categories > a {
+    padding: 9px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: var(--secondary);
+    color: var(--principal);
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--principal);
+}
+
+.date {
+    color: var(--terciary);
+    font-size: 1.15rem;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    line-height: 2.0;
+    color: var(--paragraphs)
+}
+
+footer {
+    max-width: 750px;
+    padding: 0 1rem;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+footer > p {
+    font-size: 1.12rem;
+    color: var(--terciary);
+}
+
+@media only screen and (max-width: 607px) {
+    main {
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 349px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .links {
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+
+    .categories > a {
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .categories {
+        margin-bottom: 50px;
+    }
+}
